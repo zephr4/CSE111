@@ -1,0 +1,5 @@
+QUERY PLAN
+|--SEARCH TABLE customer USING INDEX customer_idx_c_mktsegment (c_mktsegment=?)
+|--SEARCH TABLE nation USING COVERING INDEX nation_idx_n_nationkey_n_regionkey (n_nationkey=?)
+`--SEARCH TABLE region USING COVERING INDEX region_idx_r_regionkey_r_name (r_regionkey=? AND r_name=?)
+4208.73392857143

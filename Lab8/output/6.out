@@ -1,0 +1,20 @@
+QUERY PLAN
+|--SEARCH TABLE orders USING INDEX orders_idx_o_orderdate (o_orderdate>? AND o_orderdate<?)
+|--SEARCH TABLE customer USING COVERING INDEX customer_idx_c_custkey_c_nationkey (c_custkey=?)
+|--SEARCH TABLE nation USING INDEX nation_idx_n_nationkey (n_nationkey=?)
+`--USE TEMP B-TREE FOR DISTINCT
+IRAQ
+INDONESIA
+CHINA
+ROMANIA
+UNITED STATES
+ARGENTINA
+ETHIOPIA
+PERU
+EGYPT
+MOROCCO
+ALGERIA
+INDIA
+RUSSIA
+CANADA
+JAPAN
